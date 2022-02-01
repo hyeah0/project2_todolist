@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("./assets/backgroundImg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center center;
+  width: 100vh;
+  height: 100vh; */
+}
+
+.container {
+  background-image: url("./assets/subbackgroundimg.jpg");
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  min-height: 100vh;
+  /* min-width: 100vh; */
+  margin: 0 auto;
+}
+
+.task-area {
+  border: 1px solid rgb(167, 167, 167);
+}
+
+/*========= task nav ========= */
+.task-tabs {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  border-bottom: 1px solid rgb(167, 167, 167);
+  position: relative;
+}
+
+.task-tabs li {
+  padding: 1em;
+  width: 80px;
+  text-align: center;
+}
+
+#under-line {
+  background-color: rgb(190, 116, 128);
+  width: 80px;
+  height: 4px;
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  padding: 0px;
+}
+
+/*========= task ========= */
+.task {
+  display: flex;
+  padding: 1em;
+  justify-content: space-between;
+}
