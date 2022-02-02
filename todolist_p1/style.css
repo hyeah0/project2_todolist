@@ -41,6 +41,7 @@ body {
   padding: 1em;
   width: 80px;
   text-align: center;
+  cursor: pointer;
 }
 
 #under-line {
@@ -51,11 +52,28 @@ body {
   left: 0px;
   top: 50px;
   padding: 0px;
+  /* animation: moving 2s; */
 }
+
+/* @keyframes moving {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+
+  100% {
+    opacity: 1;
+    width: 80px;
+  }
+} */
 
 /*========= task ========= */
 .task {
   display: flex;
   padding: 1em;
   justify-content: space-between;
+}
+
+.taskDone {
+  text-decoration: line-through;
 }
