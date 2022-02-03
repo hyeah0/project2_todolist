@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+/* 배경 */
+body {
+  background-image: url("./assets/backgroundImg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.452);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 90%;
+  height: 90%;
+  border-top: 10px solid blanchedalmond;
+  border-bottom: 10px solid blanchedalmond;
+}
+
+/* ==================================== */
+
+.input-area {
+  /* display: flex;
+  flex-direction: column; */
+  position: relative;
+}
+
+.task-input {
+  background-color: rgba(255, 255, 255, 0.11);
+  /* transition: padding-top 0.2s, margin-top 0.2s ease; */
+  width: 80%;
+  border: 1px solid blanchedalmond;
+}
+
+.task-input:focus {
+  outline: none;
+  border-bottom: 3px solid blanchedalmond;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  transition: 0.5s;
+  padding-top: 35px;
+}
+
+.task-input + label > span {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0;
+
+  color: #8f8f8f;
+
+  position: absolute;
+  top: 6px;
+  left: 10px;
+
+  /* -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease; */
+}
+
+.task-input:focus + label > span {
+  /* top: 0px; */
+  color: #333;
+}
+
+.button-add {
+  background-color: blanchedalmond;
+  border: none;
+
+  width: 20px;
+  cursor: pointer;
+}
+
+.button-add:hover {
+  background-color: rgba(74, 100, 1, 0.692);
+  border: 1px solid blanchedalmond;
+}
+.button-add:active {
+  background-color: rgba(255, 255, 255, 0.692);
+  border: 1px solid blanchedalmond;
+  box-shadow: -1px 2px 5px rgba(81, 41, 10, 0.15),
+    0px 1px 1px rgba(81, 41, 10, 0.15);
+}
+
+/* ==================================== */
+
+/* nav */
+.task-list-container {
+  border: 1px solid rgb(177, 175, 175);
+  margin: 8px 0px;
+  /* padding: 2px; */
+  position: relative;
+}
+
+.tab-type {
+  display: flex;
+}
+
+.tab-type div {
+  padding: 5px;
+  height: 37px;
+  width: 90px;
+  text-align: center;
+  cursor: pointer;
+}
+.tab-type :hover {
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 2px 0px inset;
+}
+
+#tab-underline {
+  border-bottom: 4px solid pink;
+  width: 90px;
+  height: 37px;
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
