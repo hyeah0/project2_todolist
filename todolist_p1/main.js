@@ -9,6 +9,7 @@
 let taskInput = document.getElementById("task-input");
 let addButton = document.getElementById("add-button");
 let tabs =document.querySelectorAll(".task-tabs li");
+let underLine = document.getElementById("under-line");
 let mode="all";
 let taskList =[];
 let filterList=[];
@@ -16,6 +17,10 @@ let filterList=[];
 
 addButton.addEventListener("click",addTask);
 taskInput.addEventListener("focus",function(){taskInput.value="";})
+
+for(let i =0; i<tabs.length; i++){
+    tabs[i].addEventListener("click",function(event){filter(event)});
+}
 
 //랜덤 id 만들기//
 function randomIDGenerate(){
@@ -40,16 +45,16 @@ function addTask(){
 
 function render(){
 
-    // 모두를 클릭했을때는 tasklist, 진행중을 클릭시에는 filter list 반환
+    let resultHTML = "";
     let list =[];
+
+    // 모두를 클릭했을때는 tasklist, 진행중을 클릭시에는 filter list 반환
     if(mode == "all"){
         list = taskList;
     }
     else if(mode == "ongoing" || mode == "done"){
         list = filterList;
     }
-
-    let resultHTML = "";
 
     for(let i=0; i<list.length; i++){
 
@@ -121,17 +126,17 @@ function deleteTask(id){
 // let mode="all";
 // let filterList=[];
 
-for(let i =1; i<tabs.length; i++){
-    tabs[i].addEventListener("click",function(event){filter(event)});
-}
+// for(let i =1; i<tabs.length; i++){
+//     tabs[i].addEventListener("click",function(event){filter(event)});
+// }
 
 function filter(event){
     mode = event.target.id;
     filterList=[];
     
-    document.getElementById("under-line").style.width=event.target.offsetwidth + "px";
-    document.getElementById("under-line").style.top=event.target.offsetTop + event.target.offsetHeight + "px";
-    document.getElementById("under-line").style.left=event.target.offsetLeft + "px";
+    underLine.style.width = event.target.offsetwidth + "px";
+    underLine.style.top = event.target.offsetTop + event.target.offsetHeight + "px";
+    underLine.style.left = event.target.offsetLeft + "px";
 
 
     // console.log("filter 클릭",event.target.id);
@@ -145,8 +150,8 @@ function filter(event){
             }
         }
         
-        render();
-        console.log(filterList);
+        // render();
+        // console.log(filterList);
     }
     else if(mode == "done"){
         for(let i=0; i<taskList.length; i++){
@@ -154,7 +159,8 @@ function filter(event){
                 filterList.push(taskList[i]);
             }
         }
-        render();
-        console.log(filterList);
+        // render();
+        // console.log(filterList);
     }
+    render();
 }
