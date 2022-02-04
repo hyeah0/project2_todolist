@@ -49,22 +49,22 @@ function render(){
     //     list = filteredList;
     // }
 
-    for(let i=0; i<list.length; i++){
+    for(let i=0; i<todolist.length; i++){
 
-        if(list[i].isComplete){
-            result += `<div class="task task-done" id="${list[i].id}">
-                    <span>${list[i].content}</span></div>
+        if(todolist[i].isComplete){
+            result += `<div class="task task-done" id="${todolist[i].id}">
+                    <span>${todolist[i].content}</span></div>
                     <div class="button-box"> 
-                            <button onclick="toggleDone('${list[i].id}')">Done</button>
-                            <button onclick="deleteTask'${list[i].id}')">Delete</button>
+                            <button onclick="toggleDone('${todolist[i].id}')">Done</button>
+                            <button onclick="deleteTask'${todolist[i].id}')">Delete</button>
                     </div>`
         }
         else{
-            result += `<div class="task" id="${list[i].id}">
-                   <span>${list[i].content}</span></div>
+            result += `<div class="task" id="${todolist[i].id}">
+                   <span>${todolist[i].content}</span></div>
                    <div class="button-box"> 
-                        <button onclick="toggleDone('${list[i].id}')">Done</button>
-                        <button onclick="deleteTask'${list[i].id}')">Delete</button>
+                        <button onclick="toggleDone('${todolist[i].id}')">Done</button>
+                        <button onclick="deleteTask'${todolist[i].id}')">Delete</button>
                    </div>`
         }
     }
