@@ -56,8 +56,8 @@ body {
   top: 6px;
   left: 10px;
 
-  /* -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
-  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease; */
+  -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
 }
 
 .task-input:focus + label > span {

@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Yeon Sung", cursive;
+}
+body {
+  background-image: url("./assets/backgroundImg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 100vh;
+}
+
+.container {
+  min-height: 80vh;
+  background-color: rgba(245, 222, 179, 0.767);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.task-area {
+  border: 1px solid rgba(116, 105, 85, 0.418);
+}
+
+/* ========================================================= */
+.container h1 {
+  color: rgb(88, 80, 65);
+}
+
+/* input-area */
+
+.input-area {
+  margin: 10px 0px;
+}
+
+.inputTask {
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid rgba(116, 105, 85, 0.418);
+}
+
+.inputButton {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid rgba(116, 105, 85, 0.418);
+}
+
+.inputButton:hover {
+  background-color: rgb(49, 87, 0);
+  color: rgba(255, 231, 187, 0.418);
+}
+
+.inputButton:active {
+  background-color: rgba(49, 87, 0, 0.281);
+  color: rgba(255, 231, 187, 0.418);
+}
+
+/* ========================================================= */
+/* 탭 */
+
+.task-tab {
+  height: 58px;
+  padding: 0px;
+  margin: 0px;
+  border-bottom: 1px solid rgba(116, 105, 85, 0.418);
+
+  list-style: none;
+  display: flex;
+  position: relative;
+}
+
+.task-tab li {
+  width: 85px;
+  height: 58px;
+  padding: 1em;
+
+  text-align: center;
+  cursor: pointer;
+}
+
+#under-line {
+  height: 4px;
+  padding: 0px;
+  background-color: rgba(121, 89, 29, 0.418);
+
+  /* border-bottom: 4px solid rgba(121, 89, 29, 0.418); */
+  position: absolute;
+  top: 53px;
+  left: 0px;
+}
+
+/* ========================================================= */
+/* task */
+
+.task {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .cheak,
+.delete {
+  width: 30px;
+  height: 30px;
+  border: none;
+} */
+
+.cheak {
+  background-image: url("./assets/icon_ch.png");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+.delete {
+  background-image: url("./assets/icon_de.png");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+}

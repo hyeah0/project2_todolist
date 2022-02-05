@@ -12,7 +12,13 @@ let todolist =[]
 let filteredList = [];
 let selectedMenu = "tab-all";
 
-taskButtoon.addEventListener("click",addTask);
+taskButtoon.addEventListener("mousedown",addTask);
+// ㄴ "클릭"으로 할경우 클릭 2번 해야함, 
+// "마우스다운" 마우스 버튼을 누르고 있다가 뗄때 발생
+taskInput.addEventListener("keyup",function(event){if(event.keyCode === 13){
+    addTask(event);
+}})
+// "keyup"은 이벤트를 사용해야하며, keycode 13(enter)을 누르면 함수가 실행된다
 taskInput.addEventListener("focus",function(){taskInput.value="";})
 
 // 랜덤 아이디 만들기
@@ -73,3 +79,16 @@ function render(){
     document.getElementById("task-board").innerHTML = result;
 }
 
+// 3. delete 버튼을 누르면 할일이 삭제된다
+
+function toggleDone(id){
+    for(let i=0; i>todolist.length; i++){
+        if(taskList[i].id ===id){
+            taskList[i].iscomplete != taskList[i].iscomplete;
+            break;
+        }
+    }
+    filter();
+}
+
+// 4. 진행중 종료 탭을 누르면 언더바가 이동한다
