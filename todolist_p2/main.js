@@ -57,14 +57,16 @@ function render(){
                     <div class="button-box"> 
                             <button onclick="toggleDone('${todolist[i].id}')">Done</button>
                             <button onclick="deleteTask'${todolist[i].id}')">Delete</button>
+                    </div>
                     </div>`
         }
         else{
             result += `<div class="task" id="${todolist[i].id}">
-                   <span>${todolist[i].content}</span></div>
+                   <span>${todolist[i].content}</span>
                    <div class="button-box"> 
                         <button onclick="toggleDone('${todolist[i].id}')">Done</button>
                         <button onclick="deleteTask'${todolist[i].id}')">Delete</button>
+                   </div>
                    </div>`
         }
     }

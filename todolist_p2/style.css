@@ -118,3 +118,13 @@ body {
   top: 0px;
   left: 0px;
 }
+
+/* ==================================== */
+
+/* task */
+
+.task {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
