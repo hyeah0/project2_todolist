@@ -130,3 +130,7 @@ body {
 .delete:hover {
   background-color: pink;
 }
+
+.taskDone {
+  text-decoration: line-through;
+}
