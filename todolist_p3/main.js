@@ -49,7 +49,7 @@ function render(){
                         ${taskList[i].inputTaskValue}
                     </div>
                     <div>
-                        <button class="cheak"></button>
+                        <button class="check"></button>
                         <button class="delete"></button>
                     </div>
                     </div>`

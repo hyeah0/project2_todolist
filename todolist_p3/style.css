@@ -106,7 +106,7 @@ body {
   border: none;
 } */
 
-.cheak {
+.check {
   background-image: url("./assets/icon_ch.png");
   background-color: transparent;
   background-repeat: no-repeat;
@@ -115,6 +115,7 @@ body {
   height: 30px;
   border: none;
 }
+
 .delete {
   background-image: url("./assets/icon_de.png");
   background-color: transparent;
@@ -123,4 +124,9 @@ body {
   width: 30px;
   height: 30px;
   border: none;
+}
+
+.check:hover,
+.delete:hover {
+  background-color: pink;
 }
