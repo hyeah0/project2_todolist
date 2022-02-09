@@ -29,15 +29,17 @@ function randomIDGenerator() {
 // 1-1 유저가 할일을 적고 + 버튼을 클릭하면 할일이 추가된다.
 
 function addTask(){
-    taskValue = taskInput.value;
+    let taskValue = taskInput.value;
 
     let task = {
-        content: taskValue,
+        id: randomIDGenerator(),
         isComplete: false,
-        id: randomIDGenerator()
+        taskValue
     }
     todolist.push(task);
     console.log(todolist);
+
+    taskInput.value ="";
     render();
 
 }
@@ -46,7 +48,7 @@ function addTask(){
 
 function render(){
     let result = "";
-    list=[];
+    // list=[];
 
     // if(selectedMenu === "tab-all"){
     //     list = taskList;
@@ -58,8 +60,10 @@ function render(){
     for(let i=0; i<todolist.length; i++){
 
         if(todolist[i].isComplete){
-            result += `<div class="task task-done" id="${todolist[i].id}">
-                    <span>${todolist[i].content}</span></div>
+            result += `<div class="task"> 
+                    <div class = "task-done">
+                        ${todolist[i].taskValue}
+                    </div>
                     <div class="button-box"> 
                             <button onclick="toggleDone('${todolist[i].id}')">Done</button>
                             <button onclick="deleteTask'${todolist[i].id}')">Delete</button>
@@ -67,28 +71,50 @@ function render(){
                     </div>`
         }
         else{
-            result += `<div class="task" id="${todolist[i].id}">
-                   <span>${todolist[i].content}</span>
-                   <div class="button-box"> 
-                        <button onclick="toggleDone('${todolist[i].id}')">Done</button>
-                        <button onclick="deleteTask'${todolist[i].id}')">Delete</button>
-                   </div>
-                   </div>`
+            result += `<div class="task"> 
+                        <div>
+                            ${todolist[i].taskValue}
+                        </div>
+                        <div class="button-box"> 
+                                <button onclick="toggleDone('${todolist[i].id}')">Done</button>
+                                <button onclick="deleteTask'${todolist[i].id}')">Delete</button>
+                        </div>
+                        </div>`
         }
     }
     document.getElementById("task-board").innerHTML = result;
+    
 }
 
-// 3. delete 버튼을 누르면 할일이 삭제된다
 
+// 3. delete 버튼을 누르면 할일이 삭제된다
+function deleteTask(id){
+    for(let i = 0; i<todolist.length; i++){
+        if(todolist[i].id == id ){
+            todolist.splice(i,1);
+            break;
+        }
+        
+    }
+    console.log(todolist);
+    render();
+}
+
+
+
+// done버튼을 누르면 삭제선이 생긴다
 function toggleDone(id){
-    for(let i=0; i>todolist.length; i++){
-        if(taskList[i].id ===id){
-            taskList[i].iscomplete != taskList[i].iscomplete;
+    console.log("체크id : " ,id);
+
+    for(let i=0; i<todolist.length; i++){
+
+        if(todolist[i].id == id){
+            todolist[i].isComplete =! todolist[i].isComplete;
             break;
         }
     }
-    filter();
+    console.log(todolist);
+    render();
 }
 
 // 4. 진행중 종료 탭을 누르면 언더바가 이동한다
