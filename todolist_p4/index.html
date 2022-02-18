@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="container">
+        <h1>TO DO LIST</h1>
+        <section id="input">
+            <input id="input-text" type="text"/>
+            <button id="input-button">+</button>
+            <p>오늘의 할일은?</p>
+        </section>
+        <section id="task">
+            <nav>
+                <ul id="navigation">
+                    <li id="movingline"></li>
+                    <li id="all">ALL</li>
+                    <li id="notdone">NOT DONE</li>
+                    <li id="done">DONE</li>
+                </ul>
+            </nav>
+            <div id="task-board">
+                <div id="task-input"></div>
+                <div>
+                <button>DONE</button>
+                <button>DELETE</button>
+                </div>
+            </div>
+        </section>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
